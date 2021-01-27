@@ -1,0 +1,40 @@
+
+=== Table comparison ===
+
++===============+======================================+===========================+===============================+============+===================+=====================+
+|     Name      |                Syntax                | Tags available in runtime | Additional object allocations | === works? | primitive methods | implicit conversion |
++===============+======================================+===========================+===============================+============+===================+=====================+
+| Value Object  | class UserId { __tag: ...            | yes                       | yes                           | no         | no                | no                  |
++---------------+--------------------------------------+---------------------------+-------------------------------+------------+-------------------+---------------------+
+| Branded Type  | type UserId = string & { __tag: ...  | no                        | no                            | yes        | yes               | no                  |
++---------------+--------------------------------------+---------------------------+-------------------------------+------------+-------------------+---------------------+
+| Brand only    | type UserId = { __tag: ...           | no                        | no                            | yes        | no                | no                  |
++---------------+--------------------------------------+---------------------------+-------------------------------+------------+-------------------+---------------------+
+| Falvored Type | type UserId = string & { __tag?: ... | no                        | no                            | yes        | yes               | yes                 |
++---------------+--------------------------------------+---------------------------+-------------------------------+------------+-------------------+---------------------+
+
+
+=== Too hacky? ===
+
+Nothing in handbook
+
+Something similar in release notes
+https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#tagged-union-types
+
+TS definitions
+https://github.com/microsoft/TypeScript/blob/master/lib/typescript.d.ts#L28-L33
+
+
+=== Should I use it? ===
+
+Yes! No. Maybe?
+
+
+<====|========|==========|=================|==|=============================>
+     JS       TS         TS strict         |  TS with Branded Types
+                                           TS with Falvored Types
+
+  simple code                              complex code
+
+  errors                                   errors
+   in runtime                               in compile time
