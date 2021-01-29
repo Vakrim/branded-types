@@ -24,6 +24,9 @@ https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#t
 TS definitions
 https://github.com/microsoft/TypeScript/blob/master/lib/typescript.d.ts#L28-L33
 
+=== Packages? ===
+
+https://github.com/andnp/SimplyTyped#nominal (2,800 weekly downloads. 340 github stars)
 
 === Should I use it? ===
 
