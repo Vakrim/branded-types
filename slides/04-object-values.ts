@@ -17,6 +17,8 @@ getUser(userId);
 
 getUser(productId); // wtf?
 
+userId === productId // wtf?
+
 // Structural typing
 
 export {};
